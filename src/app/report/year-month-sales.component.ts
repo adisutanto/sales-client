@@ -37,7 +37,7 @@ export class YearMonthSalesComponent implements OnInit {
       const chartdata: number[] = [];
       const chartcolor: string[] = [];
       this.data.forEach((element: YearMonthSales) => {
-        this.barChartLabels.push(element.year + "-" + element.month);
+        this.barChartLabels.push(element.year + '-' + element.month);
         chartdata.push(element.sales);
         chartcolor.push('rgba(255, 165, 0, 0.5)');
       });

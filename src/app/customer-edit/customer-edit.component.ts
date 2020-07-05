@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { ActivatedRoute, Router } from "@angular/router";
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Customer } from '../customer/customer';
 import { CustomerService } from '../customer/customer.service';
 
@@ -23,7 +23,7 @@ export class CustomerEditComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    let id = this.actRoute.snapshot.paramMap.get('id');
+    const id = this.actRoute.snapshot.paramMap.get('id');
     this.getCustomer(id);
     this.updateCustomer();
   }
@@ -36,11 +36,11 @@ export class CustomerEditComponent implements OnInit {
   getCustomer(id) {
     this.customerService.getById(id).subscribe(data => {
       this.editForm.setValue({
-        firstName: data['firstName'],
-        lastName: data['lastName'],
-        city: data['city'],
-        country: data['country'],
-        phone: data['phone'],
+        firstName: data.firstName,
+        lastName: data.lastName,
+        city: data.city,
+        country: data.country,
+        phone: data.phone,
       });
     });
   }
@@ -52,7 +52,7 @@ export class CustomerEditComponent implements OnInit {
       city: [''],
       country: [''],
       phone: ['', [Validators.pattern('^[0-9-]+$')]]
-    })
+    });
   }
 
   onSubmit() {
@@ -60,14 +60,14 @@ export class CustomerEditComponent implements OnInit {
     if (!this.editForm.valid) {
       return false;
     } else {
-      let id = this.actRoute.snapshot.paramMap.get('id');
+      const id = this.actRoute.snapshot.paramMap.get('id');
       this.customerService.update(id, this.editForm.value)
         .subscribe(res => {
           this.router.navigateByUrl('/customers');
-          console.log('Content updated successfully!')
+          console.log('Content updated successfully!');
         }, (error) => {
-          console.log(error)
-        })
+          console.log(error);
+        });
     }
   }
 

@@ -11,26 +11,27 @@ import { YearMonthSales } from './year-month-sales';
 })
 export class ReportService {
     // TODO externalize config
-    private apiServer = "http://localhost:3000";
+    private apiServer = 'http://localhost:3000';
     httpOptions = {
         headers: new HttpHeaders({
             'Content-Type': 'application/json'
         })
-    }
+    };
+
     constructor(private httpClient: HttpClient) { }
 
     getTopSellingProducts(): Observable<ProductSales[]> {
         return this.httpClient.get<ProductSales[]>(this.apiServer + '/report/top-selling-products')
             .pipe(
                 catchError(this.errorHandler)
-            )
+            );
     }
 
     getSalesByMonth(): Observable<YearMonthSales[]> {
         return this.httpClient.get<YearMonthSales[]>(this.apiServer + '/report/sales-by-month')
             .pipe(
                 catchError(this.errorHandler)
-            )
+            );
     }
 
     errorHandler(error) {

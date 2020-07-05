@@ -16,14 +16,14 @@ export class CustomerListComponent implements OnInit {
   ngOnInit(): void {
     this.customerService.getAll().subscribe((data: Customer[]) => {
       this.customers = data;
-    })
+    });
   }
 
   removeCustomer(customer, index) {
     if (window.confirm('Are you sure?')) {
       this.customerService.delete(customer.id).subscribe((data) => {
         this.customers.splice(index, 1);
-      })
+      });
     }
   }
 }
