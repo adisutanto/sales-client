@@ -112,62 +112,62 @@
     {
       "year": 2019,
       "month": 8,
-      "sales": 50
+      "sales": 53
     },
     {
       "year": 2019,
       "month": 9,
-      "sales": 60
+      "sales": 62
     },
     {
       "year": 2019,
       "month": 10,
-      "sales": 70
+      "sales": 74
     },
     {
       "year": 2019,
       "month": 11,
-      "sales": 80
+      "sales": 87
     },
     {
       "year": 2019,
       "month": 12,
-      "sales": 90
+      "sales": 94
     },
     {
       "year": 2020,
       "month": 1,
-      "sales": 100
+      "sales": 106
     },
     {
       "year": 2020,
       "month": 2,
-      "sales": 110
+      "sales": 115
     },
     {
       "year": 2020,
       "month": 3,
-      "sales": 30
+      "sales": 48
     },
     {
       "year": 2020,
       "month": 4,
-      "sales": 40
+      "sales": 55
     },
     {
       "year": 2020,
       "month": 5,
-      "sales": 50
+      "sales": 67
     },
     {
       "year": 2020,
       "month": 6,
-      "sales": 60
+      "sales": 74
     },
     {
       "year": 2020,
       "month": 7,
-      "sales": 70
+      "sales": 89
     }
   ]
 }
