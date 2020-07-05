@@ -1,9 +1,6 @@
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
   <li [ngbNavItem]="1">
-    <a ngbNavLink>Dashboard</a>
-    <ng-template ngbNavContent>
-      <p>Dashboard</p>
-    </ng-template>
+    <a ngbNavLink routerLinkActive="active" routerLink="/dashboard">Dashboard</a>
   </li>
   <li [ngbNavItem]="2">
     <a ngbNavLink routerLinkActive="active" routerLink="/customers">Customer</a>

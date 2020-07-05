@@ -69,5 +69,105 @@
       "pkg": "Cushenbury Buckwheat",
       "isDiscontinued": false
     }
+  ],
+  "top-selling-products": [
+    {
+      "productName": "Chocolate",
+      "sales": 100
+    },
+    {
+      "productName": "Watermelon",
+      "sales": 90
+    },
+    {
+      "productName": "Durian",
+      "sales": 80
+    },
+    {
+      "productName": "Beef rendang",
+      "sales": 70
+    },
+    {
+      "productName": "Chrysanthemum",
+      "sales": 60
+    },
+    {
+      "productName": "Dimsum",
+      "sales": 55
+    },
+    {
+      "productName": "Lasagna",
+      "sales": 50
+    },
+    {
+      "productName": "Tomyum Soup",
+      "sales": 45
+    },
+    {
+      "productName": "BBQ",
+      "sales": 40
+    }
+  ],
+  "sales-by-month": [
+    {
+      "year": 2019,
+      "month": 8,
+      "sales": 50
+    },
+    {
+      "year": 2019,
+      "month": 9,
+      "sales": 60
+    },
+    {
+      "year": 2019,
+      "month": 10,
+      "sales": 70
+    },
+    {
+      "year": 2019,
+      "month": 11,
+      "sales": 80
+    },
+    {
+      "year": 2019,
+      "month": 12,
+      "sales": 90
+    },
+    {
+      "year": 2020,
+      "month": 1,
+      "sales": 100
+    },
+    {
+      "year": 2020,
+      "month": 2,
+      "sales": 110
+    },
+    {
+      "year": 2020,
+      "month": 3,
+      "sales": 30
+    },
+    {
+      "year": 2020,
+      "month": 4,
+      "sales": 40
+    },
+    {
+      "year": 2020,
+      "month": 5,
+      "sales": 50
+    },
+    {
+      "year": 2020,
+      "month": 6,
+      "sales": 60
+    },
+    {
+      "year": 2020,
+      "month": 7,
+      "sales": 70
+    }
   ]
 }

@@ -1,0 +1,18 @@
+<h1>Sales By Month</h1>
+<p *ngIf="data.length <= 0" class="no-data text-center">There is no data yet!</p>
+<table class="table table-striped" *ngIf="data.length > 0">
+    <thead>
+        <tr>
+            <th scope="col">Year</th>
+            <th scope="col">Month</th>
+            <th scope="col">Sales</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let element of data">
+            <td scope="row">{{element.year}}</td>
+            <td>{{element.month}}</td>
+            <td>{{element.sales}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -9,6 +9,9 @@ import { CustomerCreateComponent } from './customer-create/customer-create.compo
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TopSellingProductsComponent } from './report/top-selling-products.component';
+import { YearMonthSalesComponent } from './report/year-month-sales.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
     CustomerListComponent,
     CustomerDetailComponent,
     CustomerCreateComponent,
-    CustomerEditComponent
+    CustomerEditComponent,
+    DashboardComponent,
+    TopSellingProductsComponent,
+    YearMonthSalesComponent
   ],
   imports: [
     BrowserModule,
