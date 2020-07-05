@@ -1,71 +1,73 @@
 {
-    "customers": [
-        {
-            "firstName": "Joeann",
-            "lastName": "Perrelle",
-            "city": "Shuiyang",
-            "country": "China",
-            "phone": "830-376-1813"
-        },
-        {
-            "firstName": "Ellie",
-            "lastName": "Bonavia",
-            "city": "Tuapukan",
-            "country": "Indonesia",
-            "phone": "103-750-0800"
-        },
-        {
-            "firstName": "Hesther",
-            "lastName": "Allenby",
-            "city": "Lembanah",
-            "country": "Indonesia",
-            "phone": null
-        },
-        {
-            "firstName": "Olvan",
-            "lastName": "Darnody",
-            "city": "Greenhills",
-            "country": "Ireland",
-            "phone": "614-761-0088"
-        },
-        {
-            "firstName": "Xena",
-            "lastName": "Wynch",
-            "city": "Tangtou",
-            "country": "China",
-            "phone": "750-500-6298"
-        }
-    ],
-    "products": [
-        {
-            "productName": "Pepper - Roasted Red",
-            "unitPrice": 1760.98,
-            "pkg": "Milkwort Knotweed",
-            "isDiscontinued": true
-        },
-        {
-            "productName": "Butter Ripple - Phillips",
-            "unitPrice": 1139.53,
-            "pkg": "White Baneberry",
-            "isDiscontinued": true
-        },
-        {
-            "productName": "Beer - Blue Light",
-            "unitPrice": 715.86,
-            "pkg": "Emory Oak",
-            "isDiscontinued": false
-        },
-        {
-            "productName": "Wine - Bourgogne 2002, La",
-            "unitPrice": 1453.79,
-            "pkg": "Woolly Princesplume",
-            "isDiscontinued": true
-        },
-        {
-            "productName": "Muffin Mix - Raisin Bran",
-            "unitPrice": 626.81,
-            "pkg": "Cushenbury Buckwheat",
-            "isDiscontinued": false
-        }
-    ]
+  "customers": [
+    {
+      "id": 2,
+      "firstName": "Ellie",
+      "lastName": "Bonavia",
+      "city": "Tuapukan",
+      "country": "Indonesia",
+      "phone": "103-750-0800"
+    },
+    {
+      "id": 3,
+      "firstName": "Hesther",
+      "lastName": "Allenby",
+      "city": "Lembanah",
+      "country": "Indonesia",
+      "phone": null
+    },
+    {
+      "id": 4,
+      "firstName": "Olvan",
+      "lastName": "Darnody",
+      "city": "Greenhills",
+      "country": "Ireland",
+      "phone": "614-761-0088"
+    },
+    {
+      "firstName": "Xena",
+      "lastName": "Wynch",
+      "city": "Tangtou",
+      "country": "China",
+      "phone": "750-500-6298",
+      "id": 5
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productName": "Pepper - Roasted Red",
+      "unitPrice": 1760.98,
+      "pkg": "Milkwort Knotweed",
+      "isDiscontinued": true
+    },
+    {
+      "id": 2,
+      "productName": "Butter Ripple - Phillips",
+      "unitPrice": 1139.53,
+      "pkg": "White Baneberry",
+      "isDiscontinued": true
+    },
+    {
+      "id": 3,
+      "productName": "Beer - Blue Light",
+      "unitPrice": 715.86,
+      "pkg": "Emory Oak",
+      "isDiscontinued": false
+    },
+    {
+      "id": 4,
+      "productName": "Wine - Bourgogne 2002, La",
+      "unitPrice": 1453.79,
+      "pkg": "Woolly Princesplume",
+      "isDiscontinued": true
+    },
+    {
+      "id": 5,
+      "productName": "Muffin Mix - Raisin Bran",
+      "unitPrice": 626.81,
+      "pkg": "Cushenbury Buckwheat",
+      "isDiscontinued": false
+    }
+  ]
 }

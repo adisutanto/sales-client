@@ -6,17 +6,11 @@
     </ng-template>
   </li>
   <li [ngbNavItem]="2">
-    <a ngbNavLink>Customer</a>
-    <ng-template ngbNavContent>
-      <p>Customer</p>
-    </ng-template>
+    <a ngbNavLink routerLinkActive="active" routerLink="/customers">Customer</a>
   </li>
   <li [ngbNavItem]="3">
     <a ngbNavLink>Product</a>
-    <ng-template ngbNavContent>
-      <p>Product</p>
-    </ng-template>
   </li>
 </ul>
 
-<div [ngbNavOutlet]="nav" class="mt-2"></div>
+<router-outlet></router-outlet>
