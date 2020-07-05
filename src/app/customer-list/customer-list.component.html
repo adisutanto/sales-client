@@ -1,7 +1,7 @@
 <div>
     <h1>Customers</h1>
     <a routerLink="/create-customer">Create new customer</a>
-    <p *ngIf="customers.length <= 0" class="no-data text-center">There is no employee added yet!</p>
+    <p *ngIf="customers.length <= 0" class="no-data text-center">There is no customer added yet!</p>
     <table class="table table-striped" *ngIf="customers.length > 0">
         <thead>
             <tr>
