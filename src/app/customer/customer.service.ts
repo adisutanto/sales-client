@@ -1,8 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { Customer } from './customer';
+import { CustomerResponse } from './customer-response';
 
 
 @Injectable({
@@ -10,44 +11,45 @@ import { Customer } from './customer';
 })
 export class CustomerService {
   // TODO externalize config
-  private apiServer = 'http://localhost:3000';
+  private customersUrl = 'http://localhost:8080/customers/';
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
   };
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   create(customer): Observable<Customer> {
-    return this.httpClient.post<Customer>(this.apiServer + '/customers/', JSON.stringify(customer), this.httpOptions)
+    return this.http.post<Customer>(this.customersUrl, customer, this.httpOptions)
       .pipe(
         catchError(this.errorHandler)
       );
   }
   getById(id): Observable<Customer> {
-    return this.httpClient.get<Customer>(this.apiServer + '/customers/' + id)
+    return this.http.get<Customer>(this.customersUrl + id)
       .pipe(
         catchError(this.errorHandler)
       );
   }
 
   getAll(): Observable<Customer[]> {
-    return this.httpClient.get<Customer[]>(this.apiServer + '/customers/')
+    return this.http.get<CustomerResponse>(this.customersUrl)
       .pipe(
+        map(response => response._embedded.customers),
         catchError(this.errorHandler)
       );
   }
 
   update(id, customer): Observable<Customer> {
-    return this.httpClient.put<Customer>(this.apiServer + '/customers/' + id, JSON.stringify(customer), this.httpOptions)
+    return this.http.put<Customer>(this.customersUrl + id, customer, this.httpOptions)
       .pipe(
         catchError(this.errorHandler)
       );
   }
 
   delete(id) {
-    return this.httpClient.delete<Customer>(this.apiServer + '/customers/' + id, this.httpOptions)
+    return this.http.delete<Customer>(this.customersUrl + id, this.httpOptions)
       .pipe(
         catchError(this.errorHandler)
       );

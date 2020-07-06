@@ -1,4 +1,10 @@
 <h1>Top Selling Products</h1>
+<form [formGroup]="countryForm">
+    <select class="custom-select" formControlName="country">
+        <option [ngValue]=null>All Countries</option>
+        <option *ngFor="let country of countries" [ngValue]="country">{{country}}</option>
+    </select>
+</form>
 <p *ngIf="data.length <= 0" class="no-data text-center">There is no data yet!</p>
 <table class="table table-striped" *ngIf="data.length > 0">
     <thead>

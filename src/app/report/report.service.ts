@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -11,24 +11,40 @@ import { YearMonthSales } from './year-month-sales';
 })
 export class ReportService {
     // TODO externalize config
-    private apiServer = 'http://localhost:3000';
+    private reportUrl = 'http://localhost:8080/report';
+    private countriesUrl = 'http://localhost:8080/customers/countries';
     httpOptions = {
         headers: new HttpHeaders({
             'Content-Type': 'application/json'
         })
     };
 
-    constructor(private httpClient: HttpClient) { }
+    constructor(private http: HttpClient) { }
 
-    getTopSellingProducts(): Observable<ProductSales[]> {
-        return this.httpClient.get<ProductSales[]>(this.apiServer + '/report/top-selling-products')
+    getTopSellingProducts(country: string): Observable<ProductSales[]> {
+        let params = new HttpParams();
+        if (country) {
+            params = params.set('country', country);
+        }
+        return this.http.get<ProductSales[]>(this.reportUrl + '/top-selling-products', { params })
             .pipe(
                 catchError(this.errorHandler)
             );
     }
 
-    getSalesByMonth(): Observable<YearMonthSales[]> {
-        return this.httpClient.get<YearMonthSales[]>(this.apiServer + '/report/sales-by-month')
+    getSalesByMonth(country: string): Observable<YearMonthSales[]> {
+        let params = new HttpParams();
+        if (country) {
+            params = params.set('country', country);
+        }
+        return this.http.get<YearMonthSales[]>(this.reportUrl + '/sales-by-month', { params })
+            .pipe(
+                catchError(this.errorHandler)
+            );
+    }
+
+    getCountries(): Observable<string[]> {
+        return this.http.get<string[]>(this.countriesUrl)
             .pipe(
                 catchError(this.errorHandler)
             );

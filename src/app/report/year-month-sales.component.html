@@ -1,4 +1,10 @@
 <h1>Sales By Month</h1>
+<form [formGroup]="countryForm">
+    <select class="custom-select" formControlName="country">
+        <option [ngValue]=null>All Countries</option>
+        <option *ngFor="let country of countries" [ngValue]="country">{{country}}</option>
+    </select>
+</form>
 <div style="display: block;">
     <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
         [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType">
